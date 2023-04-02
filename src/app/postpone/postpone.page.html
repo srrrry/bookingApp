@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar color="srrrry">
+        <ion-title>เลื่อนนัด/ยกเลิก</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="symptom">
+        <ion-item fill="outline">
+            <ion-label position="floating">อาการเบื้องต้น : </ion-label>
+            <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+    </div>
+
+    <div class="time1">
+        <ion-label>เวลานัดหมาย </ion-label>
+    </div>
+    <div class="time">
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+                <ion-datetime id="datetime"></ion-datetime>
+            </ng-template>
+        </ion-modal>
+    </div>
+
+    <div class="confirm">
+        <ion-button fill="outline">ยืนยันการแก้ไข</ion-button>
+        <ion-button fill="outline">ยกเลิกการแก้ไข</ion-button>
+    </div>
+</ion-content>

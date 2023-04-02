@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="srrrry">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ข้อมูลส่วนตัว</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="img-box">
+        <img class="img" src="assets/eiei.jpg">
+    </div>
+    <ion-list>
+        <ion-item>
+            <ion-label>เลขบัตรประจำตัวประชาชน</ion-label>
+            <ion-label slot="end">{{ data.card_id }}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>เบอร์โทรศัพท์</ion-label>
+            <ion-label slot="end">{{ data.phone_number }}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>ชื่อ-นามสกุล</ion-label>
+            <ion-label slot="end">{{ data.customer_name }} {{ data.customer_lname }}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>ชื่อผู้ใช้งาน</ion-label>
+            <ion-label slot="end">{{ data.username }}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>รหัสผ่าน</ion-label>
+            <ion-label slot="end">{{ data.password }}</ion-label>
+        </ion-item>
+    </ion-list>
+    <div class="button">
+        <ion-button expand="block" size="large" (click)="Logout()" color="danger">ออกจากระบบ</ion-button>
+    </div>
+</ion-content>

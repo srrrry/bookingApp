@@ -1,0 +1,25 @@
+<ion-content>
+    <div class="box">
+        <div class="img-box">
+            <img class="img" src="assets/hpt.png" alt="">
+        </div>
+        <br>
+        <ion-list>
+
+            <ion-item>
+                <ion-icon class="icon" name="add-circle-outline"></ion-icon>
+                <ion-label ion-label>ชื่อผู้ใช้งาน</ion-label>
+                <ion-input [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon class="icon" name="key-outline"></ion-icon>
+                <ion-label>รหัสผ่าน</ion-label>
+                <ion-input [(ngModel)]="password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <div class="button">
+            <ion-button (click)="Login()" shape="round">เข้าสู่ระบบ</ion-button>
+            <ion-button (click)="Clear()" shape="round" color="danger">ล้างข้อมูล</ion-button>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="srrrry">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="GoToProfile()">
+                <ion-icon slot="icon-only" name="person"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>นัดหมายล่วงหน้า</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="symptom">
+        <ion-item fill="outline">
+            <ion-label position="floating">อาการเบื้องต้น : </ion-label>
+            <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+    </div>
+    <div class="time1">
+        <ion-label>เวลานัดหมาย </ion-label>
+    </div>
+    <div class="time2">
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+                <ion-datetime id="datetime"></ion-datetime>
+            </ng-template>
+        </ion-modal>
+    </div>
+    <div class="status">
+        <ion-item fill="outline">
+            <ion-label position="floating">สถานะการจองคิว : </ion-label>
+            <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+    </div>
+
+    <div class="confirm">
+        <ion-button fill="outline">ยืนยันการจองคิว</ion-button>
+        <ion-button fill="outline">ยกเลิกการจองคิว</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="srrrry">
+        <ion-title>ประวัติการนัด</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <div *ngIf="data.length==0">no data</div>
+        <ion-item *ngFor="let item of data">
+            <ion-label>
+                <div>{{ item.booking_date }}</div>
+                <div>{{ item.customer_id }}</div>
+                <div>{{ item.appointment_date }}</div>
+                <div>{{ item.symptom }}</div>
+                <div>{{ item.status_id }}</div>
+                <div>{{ item.ordered }}</div>
+            </ion-label>
+            <ion-button slot="end" size="large" fill="history" color="warning">
+                <ion-icon name="pencil-sharp"></ion-icon>
+            </ion-button>
+            <ion-button slot="end" size="large" fill="clear" color="danger">
+                <ion-icon name="trash-bin"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </div>
+</ion-content>
